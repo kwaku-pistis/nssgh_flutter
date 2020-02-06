@@ -20,6 +20,9 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
         primarySwatch: Colors.green,
+        primaryColor: Color(0xff006b3f),
+        accentColor: Color(0xffce1126),
+        primaryColorDark: Color(0xff004629)
       ),
       home: MyHomePage(title: 'Home'),
     );
