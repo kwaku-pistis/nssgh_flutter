@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:nssgh/screens/home_page.dart';
+import 'package:nssgh/screens/home/home_page.dart';
+import 'package:nssgh/screens/home/webview.dart';
 
 const InitialRoute = '/';
-const LocationDetailRoute = '/location_detail';
+const WebViewRoute = '/web_view';
 
 void main() => runApp(MyApp());
 
@@ -40,9 +41,9 @@ RouteFactory _routes() {
         case InitialRoute:
           screen = HomePage();
           break;
-        // case LocationDetailRoute:
-        //   screen = LocationDetail(arguments['id']);
-        //   break;
+        case WebViewRoute:
+          screen = MyWebView(title: null, selectedUrl: null,); //arguments['id']
+          break;
         default:
           return null;
       }
