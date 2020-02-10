@@ -1,7 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:nssgh/screens/home/webview.dart';
-import 'package:nssgh/screens/main_drawer.dart';
+import 'package:nssgh/screens/menus/about.dart';
+import 'package:nssgh/screens/menus/main_drawer.dart';
 
 class HomePage extends StatelessWidget {
   static const _GETFUND = 'http://www.getfund.gov.gh/';
@@ -17,6 +18,53 @@ class HomePage extends StatelessWidget {
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text('Home'),
+        actions: <Widget>[
+          IconButton(
+              icon: Icon(
+                Icons.library_books,
+                color: Colors.white,
+              ),
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) =>
+                        MyWebView(
+                          title: 'News', 
+                          selectedUrl: 'https://u4norproductsandservices.wordpress.com/')));
+              }),
+          PopupMenuButton(
+            itemBuilder: (context) => [
+              PopupMenuItem(
+                value: 1,
+                child: Text('Share app'),
+              ),
+              PopupMenuItem(
+                value: 2,
+                child: Text('Rate us'),
+              ),
+              PopupMenuItem(
+                value: 3,
+                child: Text('Contact us'),
+              ),
+              PopupMenuItem(
+                value: 4,
+                child: Text('About'),
+              ),
+              PopupMenuItem(
+                value: 5,
+                child: Text('FAQS'),
+              ),
+            ],
+            onSelected: (value) {
+              switch (value) {
+                case 4:
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (BuildContext context) =>
+                          About()));
+                  break;
+              }
+            },
+          )
+        ],
       ),
       drawer: MainDrawer(),
       body: DecoratedBox(
@@ -350,4 +398,8 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
+
+  // void _selected(){
+
+  //   }
 }
