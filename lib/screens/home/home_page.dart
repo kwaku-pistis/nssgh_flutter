@@ -2,7 +2,11 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:nssgh/screens/home/webview.dart';
 import 'package:nssgh/screens/menus/about.dart';
+import 'package:nssgh/screens/menus/contact_us.dart';
 import 'package:nssgh/screens/menus/main_drawer.dart';
+import 'package:package_info/package_info.dart';
+import 'package:share/share.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatelessWidget {
   static const _GETFUND = 'http://www.getfund.gov.gh/';
@@ -11,8 +15,14 @@ class HomePage extends StatelessWidget {
   static const _RAR = 'https://nss.gov.gh/rules-and-regulations/';
   static const _DWNLDS = 'https://nss.gov.gh/downloads/';
 
+  String packageName;
+
   @override
   Widget build(BuildContext context) {
+    PackageInfo.fromPlatform().then((PackageInfo packageInfo) {
+      packageName = packageInfo.packageName;
+    });
+
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
@@ -26,16 +36,16 @@ class HomePage extends StatelessWidget {
               ),
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) =>
-                        MyWebView(
-                          title: 'News', 
-                          selectedUrl: 'https://u4norproductsandservices.wordpress.com/')));
+                    builder: (BuildContext context) => MyWebView(
+                        title: 'News',
+                        selectedUrl:
+                            'https://u4norproductsandservices.wordpress.com/')));
               }),
           PopupMenuButton(
             itemBuilder: (context) => [
               PopupMenuItem(
                 value: 1,
-                child: Text('Share app'),
+                child: Text('Share app         '),
               ),
               PopupMenuItem(
                 value: 2,
@@ -56,10 +66,26 @@ class HomePage extends StatelessWidget {
             ],
             onSelected: (value) {
               switch (value) {
+                case 1:
+                  Share.share(
+                      'Check out NSS GH (National Service Scheme) app. I use it to access all NSS services without stress.\n\nGet it for free at https://play.google.com/store/apps/details?id=$packageName');
+                  break;
+                case 2:
+                  _launchUrl('market://details?id=$packageName');
+                  break;
+                case 3:
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (BuildContext context) => ContactUs()));
+                  break;
                 case 4:
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (BuildContext context) =>
-                          About()));
+                      builder: (BuildContext context) => About()));
+                  break;
+                case 5:
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (BuildContext context) => MyWebView(
+                          title: 'FAQs',
+                          selectedUrl: 'https://nss.gov.gh/faqs/')));
                   break;
               }
             },
@@ -397,6 +423,15 @@ class HomePage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void _launchUrl(final String url) async {
+    // final url = 'https://www.facebook.com/nssghana';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 
   // void _selected(){
