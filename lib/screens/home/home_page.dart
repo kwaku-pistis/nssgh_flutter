@@ -417,7 +417,6 @@ class HomePage extends StatelessWidget {
   }
 
   void _launchUrl(final String url) async {
-    // final url = 'https://www.facebook.com/nssghana';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
