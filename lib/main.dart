@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:nssgh/screens/home/home_page.dart';
-import 'package:nssgh/screens/home/webview.dart';
 
 const InitialRoute = '/';
 const WebViewRoute = '/web_view';
@@ -34,22 +33,19 @@ class MyApp extends StatelessWidget {
 }
 
 RouteFactory _routes() {
-    return (settings) {
-      //final Map<String, dynamic> arguments = settings.arguments;
-      Widget screen;
-      switch (settings.name) {
-        case InitialRoute:
-          screen = HomePage();
-          break;
-        case WebViewRoute:
-          screen = MyWebView(title: null, selectedUrl: null,); //arguments['id']
-          break;
-        default:
-          return null;
-      }
-      return MaterialPageRoute(builder: (BuildContext context) => screen);
-    };
-  }
+  return (settings) {
+    //final Map<String, dynamic> arguments = settings.arguments;
+    Widget screen;
+    switch (settings.name) {
+      case InitialRoute:
+        screen = HomePage();
+        break;
+      default:
+        return null;
+    }
+    return MaterialPageRoute(builder: (BuildContext context) => screen);
+  };
+}
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -79,13 +75,12 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      
 
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: _incrementCounter,
-      //   tooltip: 'Increment',
-      //   child: Icon(Icons.add),
-      // ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+        // floatingActionButton: FloatingActionButton(
+        //   onPressed: _incrementCounter,
+        //   tooltip: 'Increment',
+        //   child: Icon(Icons.add),
+        // ), // This trailing comma makes auto-formatting nicer for build methods.
+        );
   }
 }

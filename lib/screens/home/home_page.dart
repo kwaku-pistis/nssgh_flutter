@@ -15,10 +15,9 @@ class HomePage extends StatelessWidget {
   static const _RAR = 'https://nss.gov.gh/rules-and-regulations/';
   static const _DWNLDS = 'https://nss.gov.gh/downloads/';
 
-  String packageName;
-
   @override
   Widget build(BuildContext context) {
+    String packageName;
     PackageInfo.fromPlatform().then((PackageInfo packageInfo) {
       packageName = packageInfo.packageName;
     });
@@ -36,10 +35,8 @@ class HomePage extends StatelessWidget {
               ),
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => MyWebView(
-                        title: 'News',
-                        selectedUrl:
-                            'https://u4norproductsandservices.wordpress.com/')));
+                    builder: (BuildContext context) => MyWebView('News',
+                        'https://u4norproductsandservices.wordpress.com/')));
               }),
           PopupMenuButton(
             itemBuilder: (context) => [
@@ -83,9 +80,8 @@ class HomePage extends StatelessWidget {
                   break;
                 case 5:
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (BuildContext context) => MyWebView(
-                          title: 'FAQs',
-                          selectedUrl: 'https://nss.gov.gh/faqs/')));
+                      builder: (BuildContext context) =>
+                          MyWebView('FAQs', 'https://nss.gov.gh/faqs/')));
                   break;
               }
             },
@@ -165,9 +161,8 @@ class HomePage extends StatelessWidget {
                             onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(
                                   builder: (BuildContext context) => MyWebView(
-                                      title: 'Online Registration',
-                                      selectedUrl:
-                                          'https://portal.nss.gov.gh/registration-signin')));
+                                      'Online Registration',
+                                      'https://portal.nss.gov.gh/registration-signin')));
                             },
                           ),
                           GestureDetector(
@@ -183,9 +178,8 @@ class HomePage extends StatelessWidget {
                             onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(
                                   builder: (BuildContext context) => MyWebView(
-                                      title: 'Find Posting',
-                                      selectedUrl:
-                                          'https://portal.nss.gov.gh/sign-in')));
+                                      'Find Posting',
+                                      'https://portal.nss.gov.gh/sign-in')));
                             },
                           ),
                           GestureDetector(
@@ -201,9 +195,8 @@ class HomePage extends StatelessWidget {
                             onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(
                                   builder: (BuildContext context) => MyWebView(
-                                      title: 'Check Allowance',
-                                      selectedUrl:
-                                          'https://nss.gov.gh/ghipss/student_detailslist.php')));
+                                      'Check Allowance',
+                                      'https://nss.gov.gh/ghipss/student_detailslist.php')));
                             },
                           ),
                           GestureDetector(
@@ -219,9 +212,8 @@ class HomePage extends StatelessWidget {
                             onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(
                                   builder: (BuildContext context) => MyWebView(
-                                      title: 'Check Allowance',
-                                      selectedUrl:
-                                          'https://portal.nss.gov.gh/check-pin')));
+                                      'Check Allowance',
+                                      'https://portal.nss.gov.gh/check-pin')));
                             },
                           ),
                         ],
@@ -264,9 +256,8 @@ class HomePage extends StatelessWidget {
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
                               builder: (BuildContext context) => MyWebView(
-                                    title:
-                                        'Downloads | National Service Scheme',
-                                    selectedUrl: _DWNLDS,
+                                    'Downloads | National Service Scheme',
+                                    _DWNLDS,
                                   )));
                         },
                       ),
@@ -308,8 +299,8 @@ class HomePage extends StatelessWidget {
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
                               builder: (BuildContext context) => MyWebView(
-                                    title: 'Ministry of Education',
-                                    selectedUrl: _MOE,
+                                    'Ministry of Education',
+                                    _MOE,
                                   )));
                         },
                       ),
@@ -338,8 +329,8 @@ class HomePage extends StatelessWidget {
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
                               builder: (BuildContext context) => MyWebView(
-                                    title: 'Get Fund',
-                                    selectedUrl: _GETFUND,
+                                    'Get Fund',
+                                    _GETFUND,
                                   )));
                         },
                       ),
@@ -368,8 +359,8 @@ class HomePage extends StatelessWidget {
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
                               builder: (BuildContext context) => MyWebView(
-                                    title: 'GHIPSS',
-                                    selectedUrl: _GHIPSS,
+                                    'GHIPSS',
+                                    _GHIPSS,
                                   )));
                         },
                       ),
@@ -398,8 +389,8 @@ class HomePage extends StatelessWidget {
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
                               builder: (BuildContext context) => MyWebView(
-                                    title: 'Rules and Regulations',
-                                    selectedUrl: _RAR,
+                                    'Rules and Regulations',
+                                    _RAR,
                                   )));
                         },
                       ),
