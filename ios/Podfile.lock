@@ -1,0 +1,58 @@
+PODS:
+  - Flutter (1.0.0)
+  - flutter_email_sender (0.0.1):
+    - Flutter
+  - package_info (0.0.1):
+    - Flutter
+  - share (0.5.2):
+    - Flutter
+  - url_launcher (0.0.1):
+    - Flutter
+  - url_launcher_macos (0.0.1):
+    - Flutter
+  - url_launcher_web (0.0.1):
+    - Flutter
+  - webview_flutter (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - flutter_email_sender (from `.symlinks/plugins/flutter_email_sender/ios`)
+  - package_info (from `.symlinks/plugins/package_info/ios`)
+  - share (from `.symlinks/plugins/share/ios`)
+  - url_launcher (from `.symlinks/plugins/url_launcher/ios`)
+  - url_launcher_macos (from `.symlinks/plugins/url_launcher_macos/ios`)
+  - url_launcher_web (from `.symlinks/plugins/url_launcher_web/ios`)
+  - webview_flutter (from `.symlinks/plugins/webview_flutter/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  flutter_email_sender:
+    :path: ".symlinks/plugins/flutter_email_sender/ios"
+  package_info:
+    :path: ".symlinks/plugins/package_info/ios"
+  share:
+    :path: ".symlinks/plugins/share/ios"
+  url_launcher:
+    :path: ".symlinks/plugins/url_launcher/ios"
+  url_launcher_macos:
+    :path: ".symlinks/plugins/url_launcher_macos/ios"
+  url_launcher_web:
+    :path: ".symlinks/plugins/url_launcher_web/ios"
+  webview_flutter:
+    :path: ".symlinks/plugins/webview_flutter/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  flutter_email_sender: f787522d0e82f50e5766c1213dbffff22fdcf009
+  package_info: 48b108e75b8802c2d5e126f208ef540561c98aef
+  share: bae0a282aab4483288913fc4dc0b935d4b491f2e
+  url_launcher: a1c0cc845906122c4784c542523d8cacbded5626
+  url_launcher_macos: fd7894421cd39320dce5f292fc99ea9270b2a313
+  url_launcher_web: e5527357f037c87560776e36436bf2b0288b965c
+  webview_flutter: bec7599de6bfbe8008a739aa3ebd7b364ea9d0cd
+
+PODFILE CHECKSUM: d1779ed91c470ddf3dcf1e1d4db51f10ba1c6b90
+
+COCOAPODS: 1.8.4
