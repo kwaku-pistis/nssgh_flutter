@@ -247,9 +247,11 @@ class HomePage extends StatelessWidget {
                                   color: Color(0xffCE1126),
                                   size: 30,
                                 )),
-                            Text(
-                              'A list of downloadable NSS documents',
-                              style: TextStyle(fontSize: 16),
+                            Expanded(
+                              child: Text(
+                                'A list of downloadable NSS documents',
+                                style: TextStyle(fontSize: 16),
+                              )
                             )
                           ],
                         ),

@@ -68,7 +68,6 @@ class _ContactUsState extends State<ContactUs> {
                         margin: EdgeInsets.fromLTRB(15, 20, 15, 5),
                         color: Color(0xff006b3f),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
                           children: <Widget>[
                             Container(
                               width: 40,
@@ -80,16 +79,18 @@ class _ContactUsState extends State<ContactUs> {
                                 size: 30,
                               ),
                             ),
-                            Container(
-                              width: 300,
-                              child: Text(
-                                'SEND TO NSS',
-                                style: TextStyle(
-                                  color: Colors.white,
+                            Expanded(
+                              child: Container(
+                                width: double.maxFinite,
+                                child: Text(
+                                  'SEND TO NSS',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                  textAlign: TextAlign.center,
                                 ),
-                                textAlign: TextAlign.center,
                               ),
-                            ),
+                            )
                           ],
                         ),
                         elevation: 10,
@@ -147,7 +148,6 @@ class _ContactUsState extends State<ContactUs> {
                         margin: EdgeInsets.fromLTRB(15, 20, 15, 5),
                         color: Color(0xff006b3f),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
                           children: <Widget>[
                             Container(
                               width: 40,
@@ -159,16 +159,18 @@ class _ContactUsState extends State<ContactUs> {
                                 size: 30,
                               ),
                             ),
-                            Container(
-                              width: 300,
-                              child: Text(
-                                'SEND TO DEVELOPERS',
-                                style: TextStyle(
-                                  color: Colors.white,
+                            Expanded(
+                              child: Container(
+                                width: double.maxFinite,
+                                child: Text(
+                                  'SEND TO DEVELOPERS',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                  textAlign: TextAlign.center,
                                 ),
-                                textAlign: TextAlign.center,
                               ),
-                            ),
+                            )
                           ],
                         ),
                         elevation: 10,
@@ -219,14 +221,16 @@ class _ContactUsState extends State<ContactUs> {
                               fit: BoxFit.fill,
                             ),
                           ),
-                          Container(
-                            width: 300,
-                            child: Text(
-                              '+233-302-772714',
-                              style: TextStyle(
-                                color: Colors.white,
+                          Expanded(
+                            child: Container(
+                              width: double.maxFinite,
+                              child: Text(
+                                '+233-302-772714',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                                textAlign: TextAlign.center,
                               ),
-                              textAlign: TextAlign.center,
                             ),
                           ),
                         ],
@@ -255,14 +259,16 @@ class _ContactUsState extends State<ContactUs> {
                               fit: BoxFit.fill,
                             ),
                           ),
-                          Container(
-                            width: 300,
-                            child: Text(
-                              '+233-302-769194',
-                              style: TextStyle(
-                                color: Colors.white,
+                          Expanded(
+                            child: Container(
+                              width: double.maxFinite,
+                              child: Text(
+                                '+233-302-769194',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                                textAlign: TextAlign.center,
                               ),
-                              textAlign: TextAlign.center,
                             ),
                           ),
                         ],
@@ -291,14 +297,16 @@ class _ContactUsState extends State<ContactUs> {
                               fit: BoxFit.fill,
                             ),
                           ),
-                          Container(
-                            width: 300,
-                            child: Text(
-                              '+233-507-193125',
-                              style: TextStyle(
-                                color: Colors.white,
+                          Expanded(
+                            child: Container(
+                              width: double.maxFinite,
+                              child: Text(
+                                '+233-507-193125',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                                textAlign: TextAlign.center,
                               ),
-                              textAlign: TextAlign.center,
                             ),
                           ),
                         ],
@@ -327,14 +335,16 @@ class _ContactUsState extends State<ContactUs> {
                               fit: BoxFit.fill,
                             ),
                           ),
-                          Container(
-                            width: 300,
-                            child: Text(
-                              '+233-507-193128',
-                              style: TextStyle(
-                                color: Colors.white,
+                          Expanded(
+                            child: Container(
+                              width: double.maxFinite,
+                              child: Text(
+                                '+233-507-193128',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                                textAlign: TextAlign.center,
                               ),
-                              textAlign: TextAlign.center,
                             ),
                           ),
                         ],
