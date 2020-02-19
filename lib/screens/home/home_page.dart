@@ -65,7 +65,7 @@ class HomePage extends StatelessWidget {
               switch (value) {
                 case 1:
                   Share.share(
-                      'Check out NSS GH (National Service Scheme) app. I use it to access all NSS services without stress.\n\nGet it for free at https://play.google.com/store/apps/details?id=$packageName');
+                      'Check out NSS GH (National Service Scheme) app. I use it to access all NSS services without stress.\n\nGet it for free at https://itunes.apple.com/lookup?id=$packageName.\n\n You can also get the android app at https://play.google.com/store/apps/details?id=$packageName');
                   break;
                 case 2:
                   _launchUrl('market://details?id=$packageName');
