@@ -147,6 +147,7 @@ class HomePage extends StatelessWidget {
                         padding: const EdgeInsets.fromLTRB(60.0, 0, 60.0, 0),
                         crossAxisCount: 2,
                         shrinkWrap: true,
+                        physics: NeverScrollableScrollPhysics(),
                         children: <Widget>[
                           GestureDetector(
                             child: Container(
