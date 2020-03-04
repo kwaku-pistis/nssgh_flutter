@@ -5,6 +5,7 @@ import 'package:nssgh/screens/home/webview.dart';
 import 'package:nssgh/screens/menus/about.dart';
 import 'package:nssgh/screens/menus/contact_us.dart';
 import 'package:nssgh/screens/menus/main_drawer.dart';
+import 'package:nssgh/screens/menus/settings.dart';
 import 'package:package_info/package_info.dart';
 import 'package:share/share.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -78,6 +79,10 @@ class _MenuWebViewPageState extends State<MenuWebViewPage> {
                 value: 5,
                 child: Text('FAQS'),
               ),
+              PopupMenuItem(
+                value: 6,
+                child: Text('Settings'),
+              ),
             ],
             onSelected: (value) {
               switch (value) {
@@ -100,6 +105,10 @@ class _MenuWebViewPageState extends State<MenuWebViewPage> {
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (BuildContext context) =>
                           MyWebView('FAQs', 'https://nss.gov.gh/faqs/')));
+                  break;
+                case 6:
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (BuildContext context) => Settings()));
                   break;
               }
             },
